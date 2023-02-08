@@ -1,0 +1,455 @@
+{% extends 'base.html' %}
+{% load static %}
+ 
+  {% block content %}
+   
+
+
+  <style>
+    .container-fluid{
+      margin-left:-0px;
+      width:100px;
+      text-overflow: hidden;
+    }
+    </style>
+      <!-- tabbs start here -->
+      <div class="container">
+
+        <!-- Trigger the modal with a button -->
+
+        <ul>
+          <li> <a data-toggle="modal" data-target="#myModal1" id="message">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="black" class="bi bi-chat-left-dots" viewBox="0 0 16 16">
+              <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+              <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+            </svg>
+          </a>  
+         </li>
+         <li> <a data-toggle="modal" data-target="#myModal2" id="message">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="black" class="bi bi-question-lg" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4.475 5.458c-.284 0-.514-.237-.47-.517C4.28 3.24 5.576 2 7.825 2c2.25 0 3.767 1.36 3.767 3.215 0 1.344-.665 2.288-1.79 2.973-1.1.659-1.414 1.118-1.414 2.01v.03a.5.5 0 0 1-.5.5h-.77a.5.5 0 0 1-.5-.495l-.003-.2c-.043-1.221.477-2.001 1.645-2.712 1.03-.632 1.397-1.135 1.397-2.028 0-.979-.758-1.698-1.926-1.698-1.009 0-1.71.529-1.938 1.402-.066.254-.278.461-.54.461h-.777ZM7.496 14c.622 0 1.095-.474 1.095-1.09 0-.618-.473-1.092-1.095-1.092-.606 0-1.087.474-1.087 1.091S6.89 14 7.496 14Z"/>
+          </svg>
+          </a>  
+         </li>
+         <li> <a data-toggle="modal" data-target="#myModal3" id="message">
+         
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="black" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+          </a>  
+         </li>
+     </ul>
+
+        <!-- Modal  one -->
+        <div class="modal fade" id="myModal1" role="dialog">
+          <div class="modal-dialog">
+          
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            
+              </div>
+              <div class="modal-body">
+               
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <!-- Burger ends here -->
+        <!--Question mark starts here  -->
+       
+
+        <!-- Modal two -->
+        <div class="modal fade" id="myModal2" role="dialog">
+          <div class="modal-dialog">
+          
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header"> <h4 class="modal-title">TOMUSS 7.2.0@1667368222</h4> 
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body" id="model2body" style="width:700px; height:auto;">
+                <p>The purpose of this computer application is to allow you to follow certain pedagogical information concerning you
+                  (justified absences, attendance exemptions, CC notes in the teaching units subject to full continuous monitoring, etc.)
+                 It does not presage your regulatory registration in the EU. The marks displayed in this application are given for 
+                 information only and must be validated by the EU juries who will proceed with their verification, and any harmonization of
+                  marks between the various correctors of the tests. The purpose of this information is to help you situate yourself in 
+                  relation to the expectations of the training and to allow your pedagogical referent teacher to guide you.
+                 In case of incorrect information, you must contact the teacher who entered the information.</p>
+                    <table width="100%">
+                          <tbody>
+                          <tr>
+                        <td>
+                              <ul>
+                                <li> ABINJ (Unjustified Absence)</li>
+                                <li>ABJUS (justified absence)</li>
+                                <li>PRST (PRESENT)</li>
+                                <li>TNR (Work Not Rendered, so 0)</li>
+                                <li>PPNOT (Can't Score): The teacher didn't give a score or there was nothing to score. The average calculation does not take this score into account.</li>
+                              <li>NaN: The average cannot be calculated because there are missing marks.</li>
+                              </ul>
+                          </td>
+                    <td>
+                     <a href=""><img src="{% static 'question.png' %}" width="300px" height="300px" alt=""></a>
+                    </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                <p>The colors associated with the boxes are calculated according to the rank of the note in the group,
+                   a 14/20 is red if it is the worst note. Unless there are less than 10 notes or the teacher has chosen to color otherwise.
+                  If you disagree with an exam score, there is a one-day review of the scripts. No need to make an appointment with the teacher.
+                  There may be several days from when the note is entered until it becomes visible. This is due to the fact that
+                   the notes a
+               
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <!-- Burger ends here -->
+
+
+        <!--Question mark starts here  -->
+    
+        <!-- Modal -->
+        <div class="modal fade" id="myModal3" role="dialog">
+          <div class="modal-dialog">
+          
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              
+                <form> 
+                  <p>
+                      <a href="https://tomuss.univ-lyon1.fr/S/2022/Automne/logout?%E2%9C%80_________________________________________________________________ST-683979-2nye1MRIcZtedfzborar-cas.univ-lyon1.fr"><h2>references/ Logout
+                          p2102338</h2></a>
+          
+                       
+                         <input type="checkbox" name="genre" value="pop" />    Compact display <br>
+                        <input type="checkbox" name="genre" value="jazz" />  Black and white display <br>
+                        <input type="checkbox" name="genre" value="jazz" />   Cache ♂ ♀ <br>
+                        <input type="checkbox" name="genre" value="jazz" />  Hide this page from teachers not directly concerned. <br>
+                        <input type="checkbox" name="genre" value="jazz" />   By unchecking this box, I accept that all teaching staff and all schooling of the establishment can display this page as well as those concerning the other semesters.
+                        Hide the wallpaper image. <br>
+                        <input type="checkbox" name="genre" value="jazz" />   
+                        Hide the right menu.<br>
+                        <input type="checkbox" name="genre" value="jazz" /> Color the PRSTs green<br>
+                        <input type="checkbox" name="genre" value="jazz" /> 
+                        Write very large.<br>
+                        <input type="checkbox" name="genre" value="jazz" /> Same width for all boxes<br>
+                        <input type="checkbox" name="genre" value="jazz" />  Does not truncate text in boxes. <br>
+                        <input type="checkbox" name="genre" value="jazz" />  I can bring a computer for some lessons <br>
+                        <input type="checkbox" name="genre" value="jazz" />Share this page with a teacher <br>
+                        <input type="checkbox" name="genre" value="jazz" /> Use the GDPR site to hide or show your photo.<br>
+                 
+                  </p> 
+              </form> 
+
+                </div> 
+              </div>
+            
+            </div>
+            
+          </div>
+        </div>
+        <!-- Burger ends here -->
+        <!--Question mark starts here  -->
+        
+      </div>
+
+<!-- tabs end here -->
+
+
+      <div class="monogram">
+        <ul lang="fr" style="list-style: none; color:black; display:flex; flex-direction: row; margin-top: -70px; margin-right:100px; margin-bottom: 80px;">
+          
+          
+    <li style="margin-top:20px; color:black;">  
+      <a href="" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="black" class="bi bi-dot" viewBox="0 0 16 16">
+          <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+        </svg>
+      </a>
+    </li> 
+
+      <li><a href="">
+        <img src="{% static 'logo_ucbl.png' %}"></a>
+      </li>
+        
+        {% for yer in year2 %}
+        <li style="text-align:center"> <h5>{{yer.Year}}<br>{{yer.Semester}}</h5> 
+        </li>
+        {% endfor %}
+
+      </ul>
+
+      </div>
+
+
+<!-- header ends here -->
+
+  <!-- banners 1 start -->
+  <div class="banners">
+    
+<div class="col" id="banner1">
+  <span lang="fr"></span>Les informations indiquées ici ne sont pas officielles, elles n'ont pas de valeur légale et sont soumises à validation par les jurys d'UE.</b>.
+</div>
+
+<div class="studentinfo">
+  <h3>p2102338 Abdoulaye SY </h3>
+  </div>
+
+<div class="col" id="banner2">
+  <span>Dernière IA possible en Première année sans demande de dérogation.</span>.
+</div><hr>
+<div class="current"> <span lang="fr">Cette semaine</span> </div>
+<hr>
+  </div>
+  <!-- banners end -->
+
+
+<!-- right side table start -->
+
+
+<div class="righttable"> 
+  <div class="menutable" >
+    <!-- table one start -->
+   
+  <table  lang="fr">
+    
+      <th colspan="3" style="text-align: center;"><h4>Semestres</h4></th>
+     
+      <tr style="color:black">
+        <tr>
+          <td style="width:100px">2021</td>
+          <td></td>
+          <td><a href="{% url 'semesterone' %}">Autumn</a></td>
+
+      </tr>
+      <tr>
+          <td>2022</td>
+          <td><a href="{% url 'semestertwo' %}">Spring</a></td>
+          <td><a href="{% url 'semesterthree' %}">Autumn</a></td>
+
+      </tr>
+      <tr>
+          <td>2023</td>
+          <td><a href="{% url 'index' %}">Spring</a></td>
+
+          {% for semes in seme5 %}
+          <td><a style="color:black" href="{% url 'semesterfive' %}" lang="fr">{{seme5.Semester}}</a></td>
+          {% endfor %}
+
+      <tr>
+
+        {% for yr in year4 %}
+          <td>{{yr.Year}}</td>
+          {% endfor %}
+
+         
+          
+         
+          {% for semes in seme6 %}
+          <td><a style="color:black" href="{% url 'semestersix' %}" lang="fr"></a></td>
+          {% endfor %}
+      </tr>
+
+     
+    
+
+      <tr>
+          <td><a style="color:black" href=""></a></td>
+         
+          <td></td>
+
+      </tr>
+    </table>
+
+     <!-- table one end  -->
+ <!-- table two start -->
+<table  lang="fr">
+      <th colspan="2" lang="fr"><h4> Liens et autres informations</h4></th>
+      <tr>
+      <td lang="fr">Vous avez un problème ? Contactez votre conseiller pédagogique : Amaury Thuillier </td>
+      <td><a style="color:black" href="https://cas.univ-lyon1.fr/cas/login?service=https://tomuss.univ-lyon1.fr/S/2022/Automne/affichage_bilan_etudiant/p2102338?unsafe=1">Bilan de note</a> </td>
+      
+  </tr>
+  <tr>
+      <td> <a style="color:black"href="https://tomuss.univ-lyon1.fr/S/2022/Automne/rss/16b76bdbf82fd911">Flux RSS:  </a>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-rss-fill" viewBox="0 0 16 16">
+              <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm1.5 2.5c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1 0-2zm0 4a6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1 0-2zm.5 7a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+            </svg>
+      </td>
+      <td lang="fr"><a style="color:black" href="https://cas.univ-lyon1.fr/cas/login?service=https://dsi-webapp.univ-lyon1.fr/ADE_WEB/FR/EDT.awp">Emploi du temps</a> </td>
+      
+      
+  </tr>
+  <tr>
+      <td  lang="fr"><a  style="color:black" href="https://tomuss.univ-lyon1.fr/S/2022/Automne/rss/16b76bdbf82fd911">Licence STS</a></td>
+      <td></td>
+  </tr>
+</table>
+<!-- table two end  -->
+ <!-- table three  start -->
+<table  lang="fr" style="justify-self: normal;"> 
+  <th colspan="1" lang="fr"><h4>SOIE : Service d'orientation et d'insertion professionnelle des étudiants</h4> </th>
+  <tr>
+     <td  lang="fr"> <a style="color:black" href="https://soie.univ-lyon1.fr/actualites/booste-ton-reseau-1"> Boostez votre réseau </a></td>
+  </tr>
+  <tr>
+    <td lang="fr"> <a  style="color:black" href="https://soie.univ-lyon1.fr/actualites/newsletter-soie-novembre-2022">newsletter-soie-novembre-2022</a></td>
+      </tr>
+  <tr>
+      <td  lang="fr"><a style="color:black" href="https://soie.univ-lyon1.fr/actualites/les-ateliers-du-mois-de-novembre">les-ateliers-du-mois-de-novembre</a> </td>
+     
+      </tr>
+    </table>
+  <!-- table three  end  -->
+
+</div>
+</div>
+<!-- right side table ends here...-->
+
+  
+  <div class="container-fluid" id="subject"> 
+{% for subject in sub %}
+
+    <a data-toggle="collapse" data-target="#{{subject.Sequence}}" lang="fr"><h3 style="color:black"> 
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="black" class="bi bi-chevron-down" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+      </svg>
+      {{subject.code}}/{{subject.name}}/{{subject.Lec_name}}</h3></a>
+    <div id="{{subject.Sequence}}" class="collapse out subtable" id="scoretable">
+  
+  <table>
+<tbody>
+    <tr>
+    <td>
+      <h6 lang="fr">Seq</h6><br>
+    <h3>{{subject.Sequence}}</h3>
+    </td>
+
+    <td>
+      
+      <h6 lang="fr">Grp</h6><br>
+      <h3>{{subject.Group}}</h3>
+    
+    </td>
+    
+<td>
+<h6 lang="fr">{{subject.quiz}}</h6><br>
+<h3 lang="fr">{{subject.obt_no}}/<small lang="fr">{{subject.Total_no}}</small></h3>
+</td>
+
+  <td>
+    <h6 lang="fr">{{subject.quiz1}}</h6> <br>
+    <h3>{{subject.obt_no1}}/<small>{{subject.Total_no1}}</small></h3>
+  </td>
+    
+  <td>
+    <h6>{{subject.quiz2}}</h6> <br>
+    <h3>{{subject.obt_no2}}/<small>{{subject.Total_no2}}</small></h3>
+  </td>
+
+  <td>
+    <form action="select">
+      
+        <h6>{{subject.Value_name}}</h6>
+        <select>
+          <option >{{subject.value}}</option>
+        </select>
+      </form>
+    </td>
+
+      <td>
+        <h6>{{subject.quiz3}}</h6> <br>
+        <h3>{{subject.obt_no3}}/<small>{{subject.Total_no3}}</small></h3>
+      </td>
+
+    <td>
+        <h6>{{subject.quiz4}}</h6> <br>
+        <h3>{{subject.obt_no4}}/<small>{{subject.Total_no4}}</small></h3>
+      </td>
+
+      <td>
+        <h6>{{subject.quiz5}}</h6> <br>
+        <h3>{{subject.obt_no5}}/<small>{{subject.Total_no5}}</small></h3>
+      </td>
+
+      <td>
+        <h6>{{subject.quiz6}}</h6> <br>
+        <h3>{{subject.obt_no6}}/<small>{{subject.Total_no6}}</small></h3>
+      </td>
+
+      <td>
+        <h6>{{subject.quiz7}}</h6> <br>
+        <h2>{{subject.obt_no7}}/<small>{{subject.Total_no7}}</small></h2>
+      </td>
+<td>
+    <form action="select">
+      
+        <h6>{{subject.Value_name1}}</h6>
+        <select name="cars" id="cars">
+          <option value="volvo">{{subject.value1}}</option>
+        </select>
+      
+      </form>
+    </td>
+
+      <td>
+        <h6>{{subject.quiz8}}</h6> <br>
+        <h3>{{subject.obt_no8}}/<small>{{subject.Total_no8}}</small></h3>
+      </td>
+
+     <td>
+        <h6>{{subject.quiz9}}</h6> <br>
+        <h3>{{subject.obt_no9}}/<small>{{subject.Total_no9}}</small></h3>
+      </td>
+
+      <td>
+        <h6>{{subject.quiz10}}</h6> <br>
+        <h3>{{subject.obt_no10}}/<small>{{subject.Total_no10}}</small></h3>
+      </td>
+
+      <td>
+        <h6>{{subject.quiz11}}</h6> <br>
+        <h3>{{subject.obt_no11}}/<small>{{subject.Total_no11}}</small></h3>
+      </td>
+   
+      <td>
+        <h6>{{subject.quiz12}}</h6> <br>
+        <h3>{{subject.obt_no12}}/<small>{{subject.Total_no12}}</small></h3>
+      </td>
+
+      <td>
+        <h6>{{subject.quiz13}}</h6> <br>
+        <h3>{{subject.obt_no13}}/<small>{{subject.Total_no13}}</small></h3>
+      </td>
+
+      <td>
+        <h6>{{subject.quiz14}}</h6> <br>
+        <h3>{{subject.obt_no14}}/<small>{{subject.Total_no14}}</small></h3>
+      </td>
+
+   <td>
+    <form action="select">
+        <h6>{{subject.Value_name2}}</h6>
+        <select name="cars" id="cars">
+          <option value="volvo">{{subject.value2}}</option>
+        </select>
+      </form>
+    </td>
+
+    <td>
+        <h6>{{subject.quiz15}}</h6> <br>
+        <h3>{{subject.obt_no15}}/<small>{{subject.Total_no15}}</small></h3>
+    </td>
+  </tbody>
+  </table>
+</div>
+</div>
+{% endfor  %}
+    {% endblock %}

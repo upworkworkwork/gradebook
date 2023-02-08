@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body id="cas" class="fl-theme-iphone" style="">
+        <header>
+          <div id="header" class="flc-screenNavigator-navbar fl-navbar fl-table">
+            <h1 id="company-name">Université Claude Bernard Lyon 1</h1>
+          </div>  
+        </header>
+        <div class="flc-screenNavigator-view-container">
+            <div class="fl-screenNavigator-view">
+                <section>
+                  <div id="content" class="fl-screenNavigator-scroll-container">
+                      <h1 id="app-name" class="fl-table-cell">Service Central d'Authentification<span id="Lyon1"> Lyon 1</span><span id="AbbrCas"> - <abbr title="CAS est un système d'authentification unique qui permet de vous connecter sur les applications de l'Université Lyon 1.<br /><br />Pour des raisons de sécurité, veuillez vous déconnecter et fermer votre navigateur lorsque vous avez fini d'accéder aux services authentifiés." rel="tooltip">CAS</abbr></span></h1>
+    
+          
+            <div class="box fl-panel" id="login">
+              <form id="fm1" class="fm-v clearfix" action="/cas/login?service=https://dsi-webapp.univ-lyon1.fr/ADE_WEB/FR/EDT.awp" method="post">
+                
+                  <h2>Entrez votre identifiant et votre mot de passe.</h2>
+                  <div class="row fl-controls-left">
+                    <label for="username" class="fl-label"><span class="accesskey">I</span>dentifiant:</label>
+                              
+                              
+                              
+                     
+                     <div class="help">
+                         <abbr title="<strong>Si vous êtes étudiant</strong> :<br />votre identifiant est votre numéro étudiant dont le premier chiffre est remplacé par P (si le 1er chiffre est 1) ou X (si le 1er chiffre est 9)  ou W (si le 1er chiffre est 8).<br /><br /><strong>Si vous êtes personnel</strong> :<br /> votre identifiant est  de la forme 'prenom.nom' sans accent." rel="tooltip">?</abbr>
+                     </div>
+                              <input id="username" name="username" class="required" tabindex="1" placeholder="Ex: p1234567 ou prenom.nom" accesskey="i" type="text" value="" size="25" autocomplete="off">
+                              
+                  </div>
+                  <div class="row fl-controls-left">
+                    <label for="password" class="fl-label"><span class="accesskey">M</span>ot de passe:</label>
+                                  
+                            
+                    
+                    <div class="help">
+                      <abbr title="Votre mot de passe est celui que vous devez avoir défini dans l'application SESAME (<strong>https://sesame.univ-lyon1.fr</strong>) <br /><br /><u><strong>Conseil</strong></u> : Pour être sûr, votre mot de passe doit comporter au moins 8 caractères, au moins une lettre majuscule, une lettre minuscule et un chiffre" rel="tooltip">?</abbr>
+                    </div>
+                              <input id="password" name="password" class="required" tabindex="2" placeholder="Votre mot de passe" accesskey="m" type="password" value="" size="25" autocomplete="off">
+                  </div>
+                  <div class="row check">
+                    <ul>
+                      <li>
+                        <input id="warn" name="warn" value="true" tabindex="3" accesskey="p" type="checkbox">
+                        <label for="warn"><span class="accesskey">P</span>révenez-moi avant d'accéder à d'autres services.<abbr title="Lorsque vous vous authentifiez, la case &quot;Prévenez-moi avant de me connecter à d'autres services&quot; n'est pas cochée par défaut.<br />Ainsi, l'accès aux autres services informatiques de l'Université se fait automatiquement, sans demande de confirmation.<br /><br />Si vous cochez cette case, un avis vous préviendra quand vous serez sur le point d'accéder à un autre service informatique de l'Université. Vous devrez alors approuver la demande d'accès en cliquant sur Continuer." rel="tooltip">?</abbr></label>
+                      </li>
+                      <li>
+                        <input id="publicWorkstation" name="publicWorkstation" value="false" tabindex="4" type="checkbox">
+                        <label for="publicWorkstation">Je suis sur un ordinateur public.</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="rememberMe" id="rememberMe" value="true" tabindex="4" accesskey="r">
+                        <label for="rememberMe"><span class="accesskey">R</span>ester connecté <abbr title="En cochant cette case vous resterez connecté pendant 7 jours, même si vous fermez votre navigateur. <br /><br />Si vous voulez forcer la déconnexion, cliquez sur le lien &quot;Déconnexion&quot; en bas de page <br /><br /><u><strong>Conseil</strong></u> : Utiliser cette option uniquement sur un ordinateur privé." rel="tooltip">?</abbr></label>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="row btn-row">
+                    <input type="hidden" name="lt" value="">
+                    <input type="hidden" name="execution" value="066c0b18-33c1-4e06-a824-fd1efb3bc562_ZXlKaGJHY2lPaUpJVXpVeE1pSjkuYzNaMlprSXJkSGxoYjBKVFNURlZTemhLVUhocGFrWlhPRWN2TTNsSVdteEZjR2s1WlhOc2IwdElhR2xyU2pncmJVUlpWblEwYURjdk1FUXlaR3QyYTFsblRuRlVZakp3Y1hOcE9ERlhOemxoVEZSWFJVVnZjVVExWVZsWmFuQlJXRGhEUnpSc2VrSkJPVWcwVEM4M1lXUmlTekJMVUROR1NIaG5aMHN6YWpKc2RHTjBSRVk0YkZNd1RYRjRhVGg0UWpSRmVsYzVWMkUxZVZGeU1qRTNSRmhHYWpSV1NEaGxkMFF4UTB4c05HWnNiRTluZFZvelIzQkZhRzR3YjI1Q1NXSjRlRkp1VjFkdFJYQnBjV3N6V1d0elVtUm9WMGszWkdFNFpXdE1UV3gwT1VOd1NITjNibUZuVEZWVFNsaFhUMlpNWlVWcVZYbHVkWG94ZW1KbGRuRm9NVU5tTW1vNWEwVkxRVk5DVFM5VE4yUlNOWFptZGtaa1QxRndaek5UTmpodWRVMUZUbkIwUmtGb1VYRTBlbWd3TDFweWVTODRiM2RIUjNoaGNISTBaMnBEYVhNeFNXSmpkelk1THpKemMwdzNiRkZRSzJsQk9IRjRVVE52U1Rad0syaG9TMkZQYmtvelFWSlNTMDFPTDBKcWNqTlllbWxoWlZSWloybEdZWGg1VlZsUWJuSnNWM0pFTm5wbWVsbExOWEZITURrNGEyY3ZkWFp0YmxkNU5EUlVXVFYzWVhCUFQwWXdRWGgzT1dkTlZTdEpNVTl2WW05SFNVMDRUMEp0ZUU1Vk1XRkpVRmxhUTI1dk16WldiRUV2WlVJeWRFVnJSa2gwYkhZMU5rcGFia0pWTjJSQk5uRXhUR1J4V2t0V0wxZEpOVVJLVjNOS2NWRTRkVFJuWTFRM1duVlJSMm93TkVkVVprWjJaMDloWm5reGJIUmxiVWhWZG01UmJWWjVaSEkyT1hweWNtVldka1E0V0VkdlVWZ3dVbTloUWtoeVUzbHdhV28wUkdKWmFVdzFlQ3R6Wm1kWE1tZDZUblJzTnpkRk1scFFVRlE0UlRGdlJuWXpUbVJTYlhoUFUxZE5UbFZMWjBNMWRYQnVRMEpoT0dGd2QzWTJiRVp1YkdKV2ExbDFRVE4wU1hwSFNsTmFSM05SSzI4eGVVUlZOR2xPWW00Mk5USjFhRlV2YmtsQ2RVaGxiVzlVUmtOUk1uQlBOalpHWW05b00weHBiMEZrTVdSSmJXdHBWa2RKYnpWRmJqZHBRVk01V0NzM1dscFdXREYwYWtKamVIbFZNM0JUVFhaalprNHZNVEk1TDFReWRFWjJkbUZ0T0hJMkszTlROblpQVGtKNmRYZFJZbWR0WkU1NWREZHJjbGxEVDNGbE4zZE5lWGtyTmk5MWRVeE5RVVpoV0U1aGNtdGpSR0ZWT1ZSb2VrbFdPSFp3Y1VsTU4yWXlhV1UyWmtKT1RWbEtVeXRTYjNsU1pHaFJNWFk0TjJZNE4xSnVkRkoyVkVwaE9ESTVVVkF2U2k5T2VXSlBZMGxEUldKbmFrdE5UemxvVDNwU2EyUlJSMDE1TUdWMVJXRnRVWGhhY1c1b1duUkdZbmQwYzNaUU5FaGlPVWcwY1U5NVdGRnVUa1I1T1M5S1JYRklWWEpoTW1wb1JVNWpWRTlJU0RsdVlreGhNR2g2WldOMk1GUTNWbm94VWtWUllqbG9XVUpsUVVsR2NUbFZTazQxUW1wT1ducHZNa2QxTjJnNGJrMXpiVFZ5YWpkdVZ6RndORVpVVERsTmRFeDJRMkpWZWtKbVMyWjViRXRMTkhWUk0wUXZRMDlSUnpGcVJXTmFZa3BCZWxoalRXWjZhVXR3T1hCaFRHMXBWWGM1TUVNelVUQXJSRmxKVkRsU01IUlJOemxXTUV4amRGb3dOV2hzT0V0TFZtNXBjemQ2WWpsVU9GWmtWV293YmtOUFVFUlJWa1phTjNseFlUZDNMMkU0TVd4aGRISkdiMGRoWlU5SlEwTkVVVzU1YnpkbVpta3paMmxMZFdWWVIwNWhaVVZqWjJkR1MwbFdjMVZpZWxCbmNHSkpiaTlXUmsxNWFYWXhiM2N5ZVRWd2VtVjFiSEZ3YmtaeFJXVldLM1pGTWpaVFpXUjZaVkJFVTBGSlZHcFZiaXRCV1hKR01WaFZWR1JKWXpsNVkyRmFjMmxJWjI5NFJrRjFjbG9yZVdkcVRVaHRaMjVTVERORGJsZzRiamxDVG10VFJ6SnlZWGRHZFhwd1ltaEZibWhrZGtKckwxRk5UVWxvUzBwVFdESm1VSEJLVFZsNGNrNUlOR05GWVN0QmFrRk9jVlJoZG5ORlRscGpVVUV6V1dSVGJHMWlPRGR3ZUZnckwyMXJPVmRLU2psblR6UjBOMjluTW1KYU1VTTFUMlpoUzFSekwxbFRZM1UzVkRKek1UZGllbTl5Y2taWEsyczJPREptUkUxYU5YTTFkemxsT1VweVVESTNSMlp4ZVdGeVRUZHJiakJzYlhVck1UaHlXVVp4ZVdoa1ozZHNkMVJzY2tkR2FEZHFaRVF3WmxGc1dubERNRmxJZWpCdlRqWldTQzloUjBWM1EyVXJRWE5NVnpFd2NFdFpOMmRzV1ZGU1J6VnJiazUyUjBjNFZtRlFkSEZvTTFScVIwOUtMMjlyYzNvNVIxaFRabFYyY2tsbGJFMDNaRmRaWTJSWGJqZFlWRXN4Y3pWV1ZYazNOMUUwV25vM09XWkJkekpNU1hBNWVVOWhOMWgxUm5aMVJFRnZjWGcyYTFVNGVsSmlNUzlrTnpabWVIUXZUakpWVUhOd1NrRmxPWEl3VTNoVFZIVkVlalpHUTNsU2QzaGlWWGhZYkdnMWEwVXZiRk5rY3paUkwxTkVWREpIYVZkc1NUaEhURXBWZWtWSVREWlFZMFk0VVM5SVFTdDFLM2xKVTFOTksyNURTSEZyUjFGWmVtbFFkR2RCZERkTVJuTkxSbkl4UVc1UE0wa3hiMDF5YWtKcFJFaGtSVEp0ZEdSSmNVY3phbmMxUVdOTGEwRTNNVUpHYXpCVk55czNSbW96WkRaMlVVNXlXRGxpYnpaRGVHazJka05sVTJsVFRtaG9TV2R3YjBkc2NsUjFOMHRvUkd0MGRETnRhWFVyYlZGbU1FcGplSEp2ZWxwS2RtTmpOVnA0VWxaUmVHcFJRaTl2Ynl0WlVqazFSSFZzTjBWd2FsUjJXRlVyTW1wWloybDFOMUF6YUhsVmFFazBhWFZvVjBWa1N6QkViRkZWTTBJdlJESkVNSGR6YzBWQmJrMXZNVUZSVmtkaVQxTTJaV2RzYVdaSmFuRjVTbXhLVkRaalduQnNhVEpXZDJZMU1VZFRlVk5zZURSYVVrTXZSbXhIUXpWaWNWbERhM1ZLVWtKbEsxQktOakpuVDBWSWNIWnJPVFJQZGtaMGVFOVVha0ZTVEZSWVQxZDVSbE5sT0dKaVJubG1UeXQxWkU1SmMzbFBVRWw2V0VSaE5Va3dSRVoxTkc1SGFYQjVLMUJNVWtsbVRXRnViSHBEVVVSbldsSjBOVEJwWkdJcldrSjNLM1p0TTJoeFp6UndZV2xGU0ROU01HRmtZVXhyY25oMVJrcDJXbEJHU1ZCV1IyaG1VRU5NYWt4dU4ybENNbEpSV2xWbWQzQkxRVFZRYkRCUFFuRmpaV2hKT0ZoekwycFBWMFU1T0V0b1VFVnhRVmhpV1Nzd1pHWkpXVzkxWlM5eVVGVnBlU3M1YWxWVU5VZGFRV1pNZW10UWRUQjBVR04xVUVRMmFtcFBkRFprTkVVM1YwY3JURzA1TWpGVGVVeG9jVmxTYkcxS1YyMHhkMWwxV0ZkeGIweDJOSGxoVHpOMWJGbGtZVUYyUTJWa2MyMVlhM2xaVTNoT2RXZ3lUVFJUU1hjMVpFOUhUR0k0Tld3eFRWSnlVRmw1VjNWUVQwbHpXV2x2Tlc4cmMxVmpaVVF2VEVNMmVWcHdObVZITldkd1NFeDFZM05HTlZORU5rVk9SWHB5T0RCRlREbHJkMjB3TlRkbksxUkRPVmhMWTFWMmEyUlZPV05RVjJ0UlZYZDZjMEpNUlRjNE5HazNOMFpQVkZscFZFNDJVMVpyYlU5VGREWm9VRTh5ZERkWVJHOUxNRGhIYzNSbVkyeGlWa2MxUkVNMGNYVjRiRzFWTWt4b2VGUldWVEpFT1ZGWGNIUlNZamxrWTBsSFZHTXJVbFJrUTNOVE5WYzVZM0F2VkhKVlJUQkRMM3BNWm5WeU5sTnVOVVpXZEV4NWNXOVlXVTFhZVhZdlNtOUpZa3hyU1ZKYWJYRXhhV0puU21FMFpISlVSM3AyYURKaVEwSkVTa3MwTkhweUt6UjFWSFF3WnpSdVFrOVphMGM0YTFReGNGUlZNbkJKTVZKclRuWjRhVE5TWkVwRVZVVjRhbTVrWmpOTk16VlpVWGhoT0hwTUwwRlpiRkZNTDB0NlFVZFhWbWhtVlQwLmZQUnNaYU5qLUV4eFM0ckZSOGVOcl9Eb2hpRUtndUpna1RWc19XT2RzR0RJa1VqbGNTekpjcHZQNUo3MjFwZFlKVFhxVXlnVk9ZQmg4QlAyQy03TVp3">
+                    <input type="hidden" name="_eventId" value="submit">
+                    <input class="btn-submit" name="submit" accesskey="l" value="SE CONNECTER" tabindex="5" type="submit" title="SE CONNECTER">
+                  </div>
+                </form>
+              </div>
+              <nav>            
+                <div id="list-languages" class="fl-panel">
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                      <ul>
+                        <li><a href="?locale=fr" title="Français">Français</a></li> 
+                        <li><a href="?locale=en" title="English">English</a></li>
+                        <li><a href="?locale=es" title="Español">Español</a></li>
+                      </ul>
+                    
+                  
+               </div>
+             </nav>
+             <aside>
+                <div id="InfoHelp">
+                  <h3 id="show_hide" title="Cliquez pour afficher ou masquer l'aide"><span class="accesskey">A</span>ide</h3>
+                  <div id="ContentHelp">
+                    <ul>
+                      <li>Pour vous authentifier, vous devez impérativement avoir <u><strong>activé votre compte informatique</strong></u>. Si ce n'est pas le cas (ou si vous voulez  <u>changer</u> votre mot de passe): utilisez le service <a href="https://sesame.univ-lyon1.fr" title="Accès au portail SESAME Lyon 1"><strong>SESAME</strong></a></li>
+                      <li>Si vous avez déjà activé votre compte informatique et qu’il vous est impossible de vous identifier, contactez l'assistance au <a href="tel:0426237155" title="Téléphoner au support"><strong>04.26.23.71.55</strong></a> ou au 371.55 depuis un poste interne.</li>
+                      <li>Si votre compte est actif et fonctionnel, vous pouvez signaler un incident informatique sur <a href="http://sosinfo.univ-lyon1.fr/" title="Accès au portail SOS Informatique Lyon 1"><strong>SOS Informatique</strong></a></li>
+                      <li>Consulter la <a href="https://www.univ-lyon1.fr/-615685.kjsp" title="Accès a la charte informatique Lyon 1"><strong>Charte informatique de l’Université Lyon 1</strong></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </aside>
+    
+    
+            </div>
+          </section>
+          <footer>
+            <div id="footer" class="fl-panel fl-note fl-bevel-white fl-font-size-80">
+              <div id="copyright">
+                <nav>
+                  <ul>
+                    <li><a href="/" title="Accès à la page d'accueil du Service Central d'Authentification">Accueil</a></li>
+                    <li><a href="https://www.univ-lyon1.fr" title="Accès au site web de l'Université Claude Bernard Lyon 1">Université Lyon 1</a> - <a href="https://www.univ-lyon1.fr/a-propos-du-site/mentions-legales/" title="Consulter les mentions légales">Tous droits réservés</a></li>
+                    <li><a href="https://cas.univ-lyon1.fr/cas/logout" title="Se déconnecter du service central d'authentification">Déconnexion</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+      <script>
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+                ga('create', 'UA-37332786-5', 'univ-lyon1.fr');
+                ga('send', 'pageview');
+      </script>
+      
+    
+    
+    
+    </body>
+</body>
+</html>
